@@ -4,93 +4,94 @@
     <meta charset="UTF-8">
     <title>My Netlify Form</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.css">
-    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="Bootstrap.css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <h2>Welcome to my Netlify Form</h2>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<table>
+    <tr class="table-primary"> <td width="100%"> <h2>Welcome to my Netlify Form </h2></td></tr>
+</table>
 
-
-</nav>
-
-<form name="contact" method="POST" data-netlify="true" display="inline-block" >
-
-
-            <label for="InputEmail1">Email address</label>
-            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-
-            <label for="Password">Password</label>
-            <input type="password" class="form-control" id="Password" placeholder="Password">
-
-
-            <label for="Select1">Single Select</label>
-            <select class="form-control" id="Select1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-
-
-            <label for="Select2">Multiple Select</label>
-            <select multiple="" class="form-control" id="Select2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-
-
+<form name="contact" method="POST" data-netlify="true">
+    <div class="form-group">
+        <lable for="FirstName"> First Name</lable> </br>
+        <input type="text" name="FirstName" id="FirstName"/>
+    </div>
+    <div class="form-group">
+        <lable for="LastName"> Last Name</lable> </br>
+        <input type="text" name="LastName" id="LastName" />
+    </div>
+    <div class="form-group">
+        <label for="Email">Email address</label>
+        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" class="form-control" id="Password" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label for="select1">Single Select</label>
+        <select class="form-control" id="select1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+    <div class="form-group">
             <label for="Textarea">Text Area</label>
             <textarea class="form-control" id="Textarea" rows="3"></textarea>
-
+        </div>
 
             <legend>Radio buttons</legend>
-
+            <div class="form-check">
                 <label class="form-check-label">
                     <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
                     Option one
                 </label>
-    <br/>
-
-    <label class="form-check-label">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
                     <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
                     Option two
                 </label>
-    <br/>
-
-
-    <label class="form-check-label">
+            </div>
+            <div class="form-check disabled">
+                <label class="form-check-label">
                     <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
                     Option three
                 </label>
+            </div>
+            <legend>Checkboxes</legend>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="">
+                    Option one
+                </label>
+            </div>
+            <div class="form-check disabled">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="" >
+                    Option two
+                </label>
+            </div>
 
-
-    <br />
-
-    <legend>Checkboxes</legend>
-
-    <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" value="">
-        Option one
-    </label>
-
-    <br/>
-
-    <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" value="" >
-        Option two
-    </label>
-    <br/>
-    <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
 
 </form>
 
 </body>
 </html>
+<script>
+
+    function results(){
+        var email= document.getElementById('email').value;
+        var password= document.getElementById('password').value;
+
+        document.write(email);
+        document.write(password);
+
+    }
+
+</script>

@@ -7,5 +7,8 @@ form{
 }
 h2{
     color: #FFFFFF;
-    margin: 10px;
+    margin: 20px;
+}
+table{
+    width: 100%;
 }
