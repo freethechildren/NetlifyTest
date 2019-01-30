@@ -12,7 +12,7 @@
     <tr class="table-primary"> <td width="100%"> <h2>Welcome to my Netlify Form </h2></td></tr>
 </table>
 
-<form name="contact" method="POST" data-netlify="true">
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
     <div class="form-group">
         <lable for="FirstName"> First Name</lable> </br>
         <input type="text" name="FirstName" id="FirstName" class="form-control" />
@@ -75,7 +75,11 @@
             Option two
         </label>
     </div>
-
+    </br>
+    <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+    </p>
+    </br>
     <button type="submit" class="btn btn-primary">Submit</button>
 
 </form>
